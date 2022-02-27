@@ -96,15 +96,21 @@ body {
     grid-gap: 1rem 2rem;  
     margin: 1.5rem 0; cursor: pointer;
 }
-
-#item1, #item2, #item3 {animation: acencao .6s;}
-#item4, #item5, #item6 {animation: acencao .8s;}    
-
+   
 .item {
     height: 210px; width: 210px;
     background-color: var(--cor04); grid-area: "item"; 
     display: flex; flex-direction: column; align-items: center; justify-content: center;
     transition: transform .4s;
+}
+
+.item img {
+    width: 90%; height: 60%; border: 2px solid var(--cor06); 
+    margin-bottom: .8rem;
+}
+
+.item h2 {
+    font-size: 1.4rem; margin-top: .6rem;
 }
 
 .item:hover {
