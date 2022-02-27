@@ -1,0 +1,158 @@
+@import url(https://fonts.googleapis.com/css?family=El+Messiri:regular,500,600,700);
+@import url(https://fonts.googleapis.com/css?family=Signika:300,regular,500,600,700);
+@import url(https://fonts.googleapis.com/css?family=Gugi:regular);
+
+:root {
+    --cor01: #F257AC;
+    --cor02: #B31166;
+    --cor03: #542C59;
+    --cor04: #22006E;
+    --cor05: #281d40;
+    --cor06: #ffffff;
+    --cor07: #b4b4b4;
+    --cor08: #ACBB7A;
+    --cor09: #2D2150;
+
+    --font-titulo: 'El Messiri', sans-serif;
+    --font-padrao: 'Signika', sans-serif;
+    --font-extra: 'Gugi', arial, sans-serif;
+}
+
+* {
+    margin: 0; padding: 0; box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.header {
+    width: 100vw; height: 130px; background-color: var(--cor04);
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 5rem; 
+}
+
+.logo a {
+    text-decoration: none; font-size: 2.5rem; color: var(--cor06);
+}
+.menu {
+    display: flex; list-style: none; gap: 1rem;
+}
+.menu a {
+    color: var(--cor06); text-decoration: none; font-family: var(--font-padrao); font-size: 1.4rem;
+}
+
+#bnt-mobile {display: none;}
+
+/*---------Responsividade header mobile---------*/
+
+@media screen and (max-width: 678px) {
+    #bnt-mobile {
+        display: block; color: var(--cor06); 
+        font-size: 1.7rem; cursor: pointer;
+    }
+    .menu {
+        display: block;
+        position: absolute; top: 130px; right: 0;
+        background: var(--cor02);
+        width: 0; height: 70%;
+        transition: .6s;
+        overflow: hidden; 
+        border-radius: 0 0 0 50px;
+    }
+    .nav.active .menu {
+        display: block;
+        width: 60%;
+    }
+    .menu a {
+        display: block;
+        padding: 1.8rem 0;
+        margin: 0 2rem; text-align: center;
+    }
+}
+
+#conteiner-projetos {
+    width: 100vw; height: 100vh; overflow-x: hidden;
+    display: flex; flex-direction: column; align-items: center;
+}
+
+.header-projetos {
+    width: 100%;  margin-left: 20rem;
+}
+.header-projetos h1 {
+    font-family: var(--font-padrao); font-size: 1.8rem; color: var(--cor04);
+    margin: 1.5rem 0 0 0;
+}
+
+/*Grid Layout projetos*/
+
+.conteiner-grid {
+    width: 100%; 
+    display: grid; align-items: center; justify-content: center;
+    grid-template-areas: 
+    "item item item"
+    "item item item"
+    ;
+    grid-gap: 1rem 2rem;  
+    margin: 1.5rem 0; cursor: pointer;
+}
+
+.item {
+    height: 210px; width: 210px;
+    background-color: var(--cor04); grid-area: "item"; 
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    transition: transform .4s;
+}
+
+.item:hover {
+    transform: scale(1.2);
+}
+
+/*-------responsividade grid projetos---------*/
+
+@media screen and (max-width: 768px) {
+    
+    .conteiner-grid {
+        grid-template-areas: 
+        "item item"
+        "item item"
+        "item item"
+        ;
+        grid-gap: 2rem; 
+    }
+    .header-projetos {
+        display: flex; justify-content: flex-start;
+        margin-left: 2rem;
+    }
+}
+
+@media screen and (max-width: 505px) {
+    
+    .conteiner-grid {
+        grid-template-areas: 
+        "item"
+        "item"
+        "item"
+        "item"
+        "item"
+        "item"
+        ; 
+        grid-gap: 1.5rem; 
+    }
+}
+    
+.item img {
+    width: px; height: px; margin-bottom: 0px;    
+}
+
+.item h2 {
+    color: var(--cor06); font-family: var(--font-padrao);
+}
+.item p {
+    color: var(--cor06); font-family: var(--font-padrao); 
+}
+
+.text {
+    padding: 0 10rem; text-align: center;
+    font-family: var(--font-padrao); font-size: 1rem;
+}
