@@ -97,6 +97,9 @@ body {
     margin: 1.5rem 0; cursor: pointer;
 }
 
+#item1, #item2, #item3 {animation: acencao .6s;}
+#item4, #item5, #item6 {animation: acencao .8s;}    
+
 .item {
     height: 210px; width: 210px;
     background-color: var(--cor04); grid-area: "item"; 

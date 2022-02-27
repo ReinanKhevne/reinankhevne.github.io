@@ -27,8 +27,12 @@ body, html {overflow-x: hidden;}
 /*Sectiion-header*/
 
 #conteiner-header {
-    width: 100vw; height: 100vh; background-image: url(imagens/image-header-full.jpg);
-    background-position: center center; background-size: cover;
+    width: 100vw; height: 100vh; 
+    background-position: center center; background-size: cover; position: relative;
+}
+#conteiner-header #img-principal {
+    width: 100%; height: 100%; position: absolute; top: 0; right: 0; z-index: -10000;
+    animation: zoom 20s;
 }
 
 .logo a {
@@ -47,10 +51,31 @@ body, html {overflow-x: hidden;}
 
 .menu a {
     text-decoration: none; color: var(--cor06); font-family: var(--font-padrao);
-    font-size: 1.4rem; font-weight: bold;
+    font-size: 1.4rem; font-weight: bold; transition: .6s ease-out;
 }
+.menu a:hover {
+    color: var(--cor07);
+}
+
 #bnt-mobile {
     display: none; color: var(--cor06); font-size: 1.7rem; cursor: pointer;
+}
+/*animações*/
+
+@keyframes slider {
+    0% {transform: translateX(-15rem);}
+
+    100% {transform: translateX(0);}
+}
+@keyframes acencao {
+    0% {transform: translateY(8rem);}
+
+    100% {transform: translateY(0);}
+}
+@keyframes zoom {
+    0% {transform: scale(1.5);}
+
+    100% {transform: scale(1);}
 }
 
 /*responsividade bnt-mobile*/
@@ -114,13 +139,16 @@ body, html {overflow-x: hidden;}
 
 .header-midias {
     width: 100%; height: 10%; 
-    display: flex; justify-content: center; align-items: center;
+    display: flex; justify-content: center; align-items: center; 
 }
 .redes {display: flex; gap: 5rem;}
 
 .redes i {
     font-size: 3.5rem; 
-    color: white; 
+    color: white; transition: .4s ease-out;
+}
+.redes i:hover {
+    color: var(--cor07);
 }
 
 @media screen and (max-width: 934px) {
@@ -141,7 +169,8 @@ body, html {overflow-x: hidden;}
 
 #conteiner-projetos {
     width: 100vw; height: 100vh; overflow-x: hidden;
-    display: flex; flex-direction: column; align-items: center; position: relative;
+    display: flex; flex-direction: column; align-items: center;  
+    background: var(--cor07); position: relative;
 }
 
 #f1 {
@@ -170,9 +199,15 @@ body, html {overflow-x: hidden;}
     margin: 1.5rem 0 0 0; cursor: pointer;
 }
 
+.item img {
+    width: 90%; height: 60%; border : 2px solid var(--cor06);
+    margin-bottom: .8rem;
+}
+
 .item {
     height: 210px; width: 210px;
-    background-color: var(--cor04); grid-area: "item"; 
+    background-color: var(--cor04); 
+    grid-area: "item"; 
     display: flex; flex-direction: column; align-items: center; justify-content: center;
     transition: transform .4s;
 }
@@ -246,10 +281,6 @@ body, html {overflow-x: hidden;}
     }
 }
     
-.item img {
-    width: px; height: px; margin-bottom: 0px;    
-}
-
 .item h2 {
     color: var(--cor06); font-family: var(--font-padrao);
 }
@@ -257,7 +288,7 @@ body, html {overflow-x: hidden;}
     color: var(--cor06); font-family: var(--font-padrao); 
 }
 
-/*Conteiner conhecimentos*/
+/*Conteiner skiils*/
 
 #conteiner-conhecimentos {
     width: 100vw; height: 100vh; display: flex; flex-direction: column;
@@ -334,33 +365,13 @@ body, html {overflow-x: hidden;}
     font-size: 3rem; color: var(--cor02);
 }
 #ph {
-    font-size: 2.7rem; color: var(--cor02); border-radius: 5px;
+    font-size: 2.6rem; color: var(--cor02); border-radius: 5px;
 }
 .peca h2 {
     font-family: var(--font-padrao); font-size: 1.5rem; color: var(--cor04);
 }
 .peca p {
     font-family: var(--font-padrao); font-size: 1.1rem; color: var(--cor04);
-}
-
-/*footer conhecimentos*/
-
-.footer-conhe {
-    max-width: 1000px; width: 100%; height: 30%;
-    display: flex; flex-direction: column; align-items: center; justify-content: center;
-}
-.footer-conhe h2 {
-    color: var(--cor06); font-family: var(--font-padrao); font-size: 1.5rem; margin-bottom: .6rem;
-}
-.footer-conhe p,a {
-    color: var(--cor06); font-family: var(--font-padrao); font-size: 1.1rem;
-    text-align: center; text-decoration: none;
-}
-.footer-conhe p {
-    padding: 0 2rem;
-}
-.footer-conhe a:hover {
-    text-decoration: underline;
 }
 
 /*conteiner Serviços*/
@@ -392,10 +403,21 @@ body, html {overflow-x: hidden;}
 }
 
 .obj {
-    background-color: var(--cor08); width: 110px; height: 110px;
+    background-color: var(--cor08); width: 115px; height: 115px;
     display: flex; flex-direction: column; align-items: center; justify-content: center;
-    border-radius: 100px; cursor: pointer;
+    border-radius: 100px; cursor: pointer; transition: transform .3s;
 }
+
+.obj:hover {
+    transform: translateY(-1rem);   
+}
+
+.obj h2 {
+    font-family: var(--font-padrao); font-size: 1.1rem; color: var(--cor04); 
+}
+.obj i {
+    font-size: 1.6rem; color: var(--cor06); margin-bottom: .5rem;
+}   
 
 /*responsividade serviços*/
 
@@ -426,13 +448,23 @@ body, html {overflow-x: hidden;}
     }
 }
 
-.obj h2 {
-    font-family: var(--font-padrao); font-size: 1.4rem; color: var(--cor04);
-}
-.obj i {
-    font-size: 3rem; color: var(--cor06);
-}
+/*footer serviços*/
 
-#roda-pe {
-    width: 100%; height: 20px; background-color: var(--cor08);
+.footer-conhe {
+    max-width: 1000px; width: 100%; height: 30%;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+}
+.footer-conhe h2 {
+    color: var(--cor06); font-family: var(--font-padrao); font-size: 1.5rem; margin-bottom: .6rem;
+    animation: acencao .6s;
+}
+.footer-conhe p,a {
+    color: var(--cor06); font-family: var(--font-padrao); font-size: 1.1rem;
+    text-align: center; text-decoration: none;
+}
+.footer-conhe p {
+    padding: 0 2rem; animation: acencao .7s;
+}
+.footer-conhe a:hover {
+    text-decoration: underline;
 }
