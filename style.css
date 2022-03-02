@@ -32,8 +32,9 @@ body, html {overflow-x: hidden;}
 }
 #conteiner-header #img-principal {
     width: 100%; height: 100%; position: absolute; top: 0; right: 0; z-index: -10000;
-    animation: zoom 20s;
+    animation: 20s zoom;
 }
+
 
 .logo a {
     text-decoration: none; color: var(--cor06); font-family: var(--font-padrao);
@@ -103,6 +104,11 @@ body, html {overflow-x: hidden;}
         padding: 2rem 0;
         margin: 0 3rem;
         text-align: center;
+    }
+    #conteiner-header #img-principal {display: none;}
+    #conteiner-header {
+        background-image: url(imagens/image-header-full.jpg); background-position: center center;
+        background-size: cover;
     }
 }
 
@@ -403,7 +409,7 @@ body, html {overflow-x: hidden;}
 }
 
 .obj {
-    background-color: var(--cor08); width: 115px; height: 115px;
+    background-color: var(--cor01); width: 115px; height: 115px;
     display: flex; flex-direction: column; align-items: center; justify-content: center;
     border-radius: 100px; cursor: pointer; transition: transform .3s;
 }
@@ -433,7 +439,7 @@ body, html {overflow-x: hidden;}
         "obj obj"
         "obj obj"
     ; 
-    grid-gap: 1rem;
+    grid-gap: .8rem;
     }
     .obj {
         width: 110px; height: 110px;
