@@ -24,6 +24,8 @@
 
 body, html {overflow-x: hidden;}
 
+html {scroll-behavior: smooth;}
+
 /*Sectiion-header*/
 
 #conteiner-header {
@@ -35,7 +37,17 @@ body, html {overflow-x: hidden;}
     animation: 20s zoom;
 }
 
-
+.reset {
+    width: 60px; height: 60px; background: var(--cor02);
+    position: fixed; bottom: 8%; right: 5%; border-radius: 10px; z-index: 999999;
+    display: flex; justify-content: center; align-items: center; font-size: 1.8rem;
+}
+@media screen and (max-width: 678px) {
+    .reset {
+        width: 50px; height: 40px; position: fixed; bottom: 10%; left: 0;
+        border-radius: 0 10px 10px 0;
+    }
+}
 .logo a {
     text-decoration: none; color: var(--cor06); font-family: var(--font-padrao);
     font-size: 3rem;
@@ -161,11 +173,14 @@ body, html {overflow-x: hidden;}
     .header-midias {display: none;}
     .header-text {padding-right: .5rem;}
 }
+
+#mobile-title {display: none;}
+
 @media screen and (max-width: 630px) {
     .header-midias {display: block; display: flex; align-items: center;}
     .redes {gap: 3rem;}
     .redes i {font-size: 2.5rem; }
-    .header-text h1 {font-size: 2.1rem;}
+    #desktop-title {display: none;} #mobile-title {display: block; font-size: 2rem;}
     .header-text h2 {font-size: 1.5rem;}
     .header-text p {font-size: 1rem;}
     #bnt-home {width: 40%;}
