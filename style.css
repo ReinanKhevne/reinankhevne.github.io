@@ -499,6 +499,7 @@ html {scroll-behavior: smooth;}
     position: absolute; bottom: 0; animation: acencao .8s;
     display: flex; justify-content: center; align-items: center;
     border-radius: 70px 70px 0 0; cursor: pointer; transition: .4s ease-out;
+    padding: 0 3.5rem;
 }
 .rodape:hover {
     height: 40px; 
