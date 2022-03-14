@@ -44,7 +44,7 @@ html {scroll-behavior: smooth;}
 
 .logo a {
     text-decoration: none; color: var(--cor06); font-family: var(--font-padrao);
-    font-size: 1.6rem;
+    font-size: 2.5rem;
 }
 
 @media screen and (max-width: 678px) {
@@ -57,7 +57,7 @@ html {scroll-behavior: smooth;}
 .header {
     width: 100%; height: 80px;
     display: flex; align-items: center; justify-content: space-between;
-    padding: 0 3.5rem;
+    padding: 0 4rem;
 }
 .menu {
     display: flex; list-style: none; gap: 1rem; 
@@ -132,6 +132,8 @@ html {scroll-behavior: smooth;}
     display: flex; flex-direction: column;
     padding: 4rem 12rem 0 4rem;
 }
+
+#text {margin-right: 1rem;}
 
 .header-text h1 {
     font-family: var(--font-titulo); font-size: 2.7rem; color: var(--cor06);
@@ -227,7 +229,7 @@ html {scroll-behavior: smooth;}
 }
 
 .item {
-    height: 210px; width: 210px;
+    height: 215px; width: 215px;
     background-color: var(--cor04); 
     grid-area: "item"; border-radius: 8px;
     display: flex; flex-direction: column; align-items: center; justify-content: center;
@@ -307,7 +309,7 @@ html {scroll-behavior: smooth;}
     color: var(--cor06); font-family: var(--font-padrao);
 }
 .item p {
-    color: var(--cor06); font-family: var(--font-padrao); 
+    color: var(--cor06); font-family: var(--font-padrao); font-size: 1rem;
 }
 
 /*Conteiner skiils*/
@@ -365,7 +367,7 @@ html {scroll-behavior: smooth;}
         grid-gap: 1rem 2rem;
     }   
     .peca {
-        width: 200px; height: 200px; 
+        width: 160px; height: 180px; border-radius: 25px; text-align: center;
     }
     .header-conhecimentos {
         display: flex; justify-content: flex-start;
@@ -462,7 +464,6 @@ html {scroll-behavior: smooth;}
     .obj {
         width: 110px; height: 110px;
     }
-    .header-skill h2 {margin: 1rem 0;}
 }
 
 @media screen and (max-width: 505px) {
