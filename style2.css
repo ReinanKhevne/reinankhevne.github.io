@@ -23,7 +23,7 @@
 }
 
 body {
-    overflow-x: hidden; 
+    overflow-x: hidden;
     background-image: 
     url(https://images.unsplash.com/photo-1497091071254-cc9b2ba7c48a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=874&q=80);
 }
@@ -42,19 +42,26 @@ body {
 }
 .menu a {
     color: var(--cor06); text-decoration: none; font-family: var(--font-padrao); font-size: 1.4rem;
+    transition: .4s ease-out;
 }
+.menu a:hover {color: var(--cor07);}
 
 #bnt-mobile {display: none;}
 
 /*---------Responsividade header mobile---------*/
 
 @media screen and (max-width: 678px) {
+
+    .header {
+        display: flex; justify-content: space-between; align-items: center;
+        padding: 2rem 3rem;
+    }
+
     #bnt-mobile {
-        display: block; 
-        font-size: 1.7rem; cursor: pointer;
+        display: block;  
     }
     #bnt-mobile a {
-        color: var(--cor06); 
+        color: var(--cor06); font-size: 1.4rem; font-family: var(--font-padrao);
     }
     .menu {
         display: block;
@@ -89,6 +96,7 @@ body {
     margin: 1.5rem 0 0 0;
 }
 
+
 /*Grid Layout projetos*/
 
 .conteiner-grid {
@@ -101,6 +109,8 @@ body {
     grid-gap: 1rem 2rem;  
     margin: 1.5rem 0; cursor: pointer;
 }
+
+a {text-decoration: none;}
    
 .item {
     height: 210px; width: 210px;
@@ -124,7 +134,7 @@ body {
 
 /*-------responsividade grid projetos---------*/
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 768px) {  
     
     .conteiner-grid {
         grid-template-areas: 
