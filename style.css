@@ -207,7 +207,7 @@ html {scroll-behavior: smooth;}
 }
 .header-projetos h1 {
     font-family: var(--font-padrao); font-size: 1.8rem; color: var(--cor04);
-    margin: 1.5rem 0 0 0;
+    margin: 1.5rem 0 0 0; font-weight: bold;
 }
 
 /*Grid Layout projetos*/
@@ -354,6 +354,8 @@ html {scroll-behavior: smooth;}
     display: flex; justify-content: center; align-items: center; flex-direction: column;
     padding: .5rem; cursor: pointer;
 }
+
+.simb {display: flex; gap: .6rem;}
 
 /*responsividade skiil*/
 
