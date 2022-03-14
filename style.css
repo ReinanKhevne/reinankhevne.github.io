@@ -10,7 +10,6 @@
     --cor05: #281d40;
     --cor06: #ffffff;
     --cor07: #b4b4b4;
-    --cor08: #ACBB7A;
     --cor09: #2D2150;
 
     --font-titulo: 'El Messiri', sans-serif;
@@ -53,7 +52,6 @@ html {scroll-behavior: smooth;}
         width: 50px; height: 40px; position: fixed; bottom: 10%; left: 0;
         border-radius: 0 10px 10px 0;
     }
-    .logo a {font-size: 2.2rem;}
 }
 
 .header {
@@ -132,7 +130,7 @@ html {scroll-behavior: smooth;}
 .header-text {
     width: 100%; height: 70%;
     display: flex; flex-direction: column;
-    padding: 4rem 12rem 0 4rem; 
+    padding: 4rem 12rem 0 4rem;
 }
 
 .header-text h1 {
@@ -231,7 +229,7 @@ html {scroll-behavior: smooth;}
 .item {
     height: 210px; width: 210px;
     background-color: var(--cor04); 
-    grid-area: "item"; 
+    grid-area: "item"; border-radius: 8px;
     display: flex; flex-direction: column; align-items: center; justify-content: center;
     transition: transform .4s;
 }
