@@ -453,6 +453,10 @@ html {scroll-behavior: smooth;}
     .obj {
         width: 110px; height: 110px; 
     }
+    .header-skill {
+        display: flex; justify-content: flex-start;
+        margin-left: 2rem; 
+    }
 }
 
 @media screen and (max-width: 690px) {
@@ -465,13 +469,6 @@ html {scroll-behavior: smooth;}
     }
     .obj {
         width: 110px; height: 110px;
-    }
-}
-
-@media screen and (max-width: 505px) {
-    .header-skill {
-        display: flex; justify-content: flex-start;
-        margin-left: 2rem; 
     }
 }
 
