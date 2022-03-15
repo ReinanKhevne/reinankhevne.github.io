@@ -511,3 +511,28 @@ html {scroll-behavior: smooth;}
 .rodape a {
     font-family: var(--font-padrao); font-size: 1.2rem; color: var(--cor06);
 }
+
+/*Créditos*/
+
+.conteiner-creditos {
+    width: 100vw; height: 100vh; background: var(--cor09);
+}
+
+.conteiner-creditos h1 {
+    font-family: var(--font-padrao); color: var(--cor06); padding: 3rem 3em;
+}
+
+.sites {
+    display: flex; justify-content: center;
+    width: 100%; height: 60%; margin-top: 3rem;
+}
+.sites a {color: var(--cor02);}
+.sites a:hover {text-decoration: underline;}
+
+#unsplash {
+    width: 50%; padding: 0 2rem;
+}
+
+#pexels {
+    width: 50%; padding: 0 2rem;
+}
