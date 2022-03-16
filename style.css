@@ -173,20 +173,24 @@ html {scroll-behavior: smooth;}
 }
 
 @media screen and (max-width: 934px) {
-    .header-midias {display: none;}
     .header-text {padding-right: .5rem;}
 }
 
 #mobile-title {display: none;}
 
 @media screen and (max-width: 630px) {
-    .header-midias {display: block; display: flex; align-items: center;}
+    .header-midias {display: flex; align-items: center;}
     .redes {gap: 3rem;}
     .redes i {font-size: 2.5rem; }
     #desktop-title {display: none;} #mobile-title {display: block; font-size: 2rem;}
     .header-text h2 {font-size: 1.5rem;}
     .header-text p {font-size: 1rem;}
     #bnt-home {width: 40%;}
+}
+
+@media screen and (min-width: 630px) and (max-width: 768px) {
+    .redes i {font-size: 3rem;}
+    .header-midias {display: flex; gap: .4rem;}
 }
 
 /*conteiner-Projetos*/
@@ -515,7 +519,7 @@ html {scroll-behavior: smooth;}
 /*Créditos*/
 
 .conteiner-creditos {
-    width: 100vw; height: 100vh; background: var(--cor09);
+    width: 100vw; height: 100vh; background: var(--cor04);
 }
 
 .conteiner-creditos h1 {
@@ -545,4 +549,16 @@ html {scroll-behavior: smooth;}
     #pexels, #unsplash {
         width: 100%; height: 70%;
     }
+}
+
+/*Unsplash*/
+
+.forma {
+    width: 100px; height: 100px; display: flex; align-items: center;
+    margin-top: 4rem; gap: 3rem;
+}
+
+.forma img {
+    width: 220px; height: 120px;
+    border: 2px solid var(--cor06); 
 }
