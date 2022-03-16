@@ -83,7 +83,7 @@ html {scroll-behavior: smooth;}
     100% {transform: translateX(0);}
 }
 @keyframes acencao {
-    0% {transform: translateY(8rem);}
+    0% {transform: translateY(13rem);}
 
     100% {transform: translateY(0);}
 }
@@ -139,18 +139,19 @@ html {scroll-behavior: smooth;}
 }
 
 .header-text h1 {
-    font-family: var(--font-titulo); font-size: 2.7rem; color: var(--cor06);
+    font-family: var(--font-titulo); font-size: 2.7rem; color: var(--cor06); animation: acencao .6s;
 }
 .header-text h2 {
-    font-family: var(--font-titulo); font-size: 1.8rem; color: var(--cor06);
+    font-family: var(--font-titulo); font-size: 1.8rem; color: var(--cor06); animation: acencao .7s;
 }
 .header-text p {
     font-family: var(--font-titulo); font-size: 1.1rem; color: var(--cor06); margin: 2rem 0;
+    animation: acencao .8s;
 }
 #bnt-home {
     font-family: var(--font-padrao); font-size: 1.2rem;
     background: none; border: 3px solid var(--cor02); outline: 0; color: var(--cor06);
-    padding: .3rem .6rem; width: 30%; border-radius: 10px; cursor: pointer;
+    padding: .3rem .6rem; width: 30%; border-radius: 10px; cursor: pointer; animation: acencao .9s;
 }
 #bnt-home:hover {
     border: 3px solid var(--cor01); color: var(--cor07);
@@ -164,7 +165,7 @@ html {scroll-behavior: smooth;}
 /*redes sociais*/
 
 .header-midias {
-    width: 100%; height: 10%; 
+    width: 100%; height: 10%; animation: acencao .6s;
     display: flex; justify-content: center; align-items: center; 
 }
 .redes {display: flex; gap: 5rem;}
@@ -342,7 +343,7 @@ html {scroll-behavior: smooth;}
 }
 
 .header-conhecimentos {
-    width: 100%; margin-left: 20rem; 
+    width: 100%; margin-left: 20rem;
 }
 .header-conhecimentos h1 {
     font-family: var(--font-padrao); font-size: 1.8rem; color: var(--cor06);
