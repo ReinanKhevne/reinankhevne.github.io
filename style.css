@@ -528,9 +528,11 @@ html {scroll-behavior: smooth;}
     width: 100vw; height: 100vh; background: var(--cor10);
 }
 
-.conteiner-creditos h1 {
-    font-family: var(--font-padrao); color: var(--cor06); padding: 3rem 3em;
+.cabecalho {
+    display: flex; align-items: center; justify-content: space-between; padding: 4rem 3rem 4rem 4rem;
 }
+.cabecalho h1 {font-family: var(--font-padrao); color: var(--cor02);}
+.cabecalho a {font-size: 1.2rem;}
 
 .sites {
     display: flex; justify-content: center; gap: .8rem;
